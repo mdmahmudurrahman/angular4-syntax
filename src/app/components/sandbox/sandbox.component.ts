@@ -12,17 +12,16 @@ import { Customer } from './Customer';
 export class SandboxComponent {
   isSpecial = true;
   canSave = true;
-
-  currentClasses = {};
+  currentStyles = {};
 
   constructor() {
-    this.setCurrentClasses();
+    this.setCurrentStyles();
   }
 
-  setCurrentClasses() {
-    this.currentClasses = {
-      savebble: this.canSave,
-      special: this.isSpecial
+  setCurrentStyles() {
+    this.currentStyles = {
+      'font-style': this.canSave ? 'italic' : 'normal',
+      'font-size': this.isSpecial ? '50px' : '10px'
     }
   }
 }
