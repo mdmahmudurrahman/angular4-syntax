@@ -10,10 +10,6 @@ import { Customer } from './Customer';
 })
 
 export class SandboxComponent {
-  name:string = "John Doe";
-  showName:boolean = false;
-  
-  // constructor() {
-    
-  // }
+  imageUrl = "http://lorempixel.com/400/200";
+  isUnchanged:boolean = false;
 }

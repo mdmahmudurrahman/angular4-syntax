@@ -1,23 +1,14 @@
-<h1>Hello 
-  <!-- <span *ngIf="showName">{{name}}</span>
-  <span *ngIf="!showName">World</span> -->
+<h1>Hello world</h1>
+<!-- 3 ways to bind properties -->
 
-  <span *ngIf="showName; else noName">{{name}}</span>
-  <ng-template #noName>World</ng-template> 
+<div><img src="{{ imageUrl}}" alt=""></div>
+<div><img [src]="imageUrl" alt=""></div>
+<div><img bind-src="imageUrl" alt=""></div>
 
-  <!-- short hand -->
-
-  <p>Hello {{ showName ? name : "World"}}</p>
-
-  <!-- using switch  -->
-  <hr>
-
-  <div [ngSwitch]="1">
-    <div *ngSwitchCase="'1'">Hello number one</div>
-    <div *ngSwitchCase="'2'">Hello number two</div>
-    <div *ngSwitchCase="'3'">Hello number three</div>
-    <div *ngSwitchDefault>Hello world</div>
-  </div>
-
-</h1>
+<h4>Image location: <span [textContent]="imageUrl"></span></h4>
     
+
+<hr>
+<p>Create post</p>
+<p [hidden]="isUnchanged">Post has been changed, please wait</p>
+<button [disabled]="isUnchanged">Save</button>
