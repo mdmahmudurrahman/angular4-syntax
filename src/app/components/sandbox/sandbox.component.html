@@ -1,12 +1,23 @@
-<h1>Hello {{customer.name}}</h1>
-<ul class="special">
-  <li *ngFor="let customer of customers">
-    {{ customer.id }}: {{ customer.name}}: {{customer.email}}
-  </li>
-</ul>
+<h1>Hello 
+  <!-- <span *ngIf="showName">{{name}}</span>
+  <span *ngIf="!showName">World</span> -->
 
-<ul>
-  <li *ngFor="let customer of customers; let i = index">
-    Index: {{i + 1}} => {{ customer.id }}: {{ customer.name}}: {{customer.email}}
-  </li>
-</ul>
+  <span *ngIf="showName; else noName">{{name}}</span>
+  <ng-template #noName>World</ng-template> 
+
+  <!-- short hand -->
+
+  <p>Hello {{ showName ? name : "World"}}</p>
+
+  <!-- using switch  -->
+  <hr>
+
+  <div [ngSwitch]="1">
+    <div *ngSwitchCase="'1'">Hello number one</div>
+    <div *ngSwitchCase="'2'">Hello number two</div>
+    <div *ngSwitchCase="'3'">Hello number three</div>
+    <div *ngSwitchDefault>Hello world</div>
+  </div>
+
+</h1>
+    

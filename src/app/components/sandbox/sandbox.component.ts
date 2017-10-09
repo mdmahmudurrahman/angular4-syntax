@@ -10,32 +10,10 @@ import { Customer } from './Customer';
 })
 
 export class SandboxComponent {
-  customer:Customer;
-  customers:Customer[];
+  name:string = "John Doe";
+  showName:boolean = false;
   
-  constructor() {
-    this.customer = {
-      id: 1,
-      name: "John Doe",
-      email: "test@test.com"
-    }
-
-    this.customers = [
-      {
-        id: 2,
-        name: "John Doe2",
-        email: "test@test.com"
-      },
-      {
-        id: 3,
-        name: "John Do3",
-        email: "test@test.com"
-      },
-      {
-        id: 4,
-        name: "John Doe4",
-        email: "test@test.com"
-      }
-    ]
-  }
+  // constructor() {
+    
+  // }
 }
