@@ -6,28 +6,14 @@ import { Component, NgModule } from '@angular/core';
 @Component({
   selector: 'sandbox',
   template: `
-    <h1>{{name}} is {{age}} years old</h1>
-    <h2>My name is {{person.firstName}} {{person.lastName}}</h2>
-    <p>Your age is {{showAge()}}</p>
+    <h1>Hello {{name}}</h1>
   `
 })
 
 export class SandboxComponent {
-  name = "John Doe";
-  age = 35;
-  person = { firstName: 'Steve', lastName: 'Smith'}
+  name:string = "John Doe";
 
   constructor() {
-    console.log('Constructor is called for Sandbox');
-    // this.age = 100;
-    this.hasBirthDay();
-  }
-
-  hasBirthDay() {
-    this.age += 100;
-  }
-
-  showAge() {
-    return this.age;
+    this.name = "Mahmud";
   }
 }
