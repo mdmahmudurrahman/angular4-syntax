@@ -10,6 +10,19 @@ import { Customer } from './Customer';
 })
 
 export class SandboxComponent {
-  imageUrl = "http://lorempixel.com/400/200";
-  isUnchanged:boolean = false;
+  isSpecial = true;
+  canSave = true;
+
+  currentClasses = {};
+
+  constructor() {
+    this.setCurrentClasses();
+  }
+
+  setCurrentClasses() {
+    this.currentClasses = {
+      savebble: this.canSave,
+      special: this.isSpecial
+    }
+  }
 }

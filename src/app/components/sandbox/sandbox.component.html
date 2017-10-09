@@ -1,14 +1,5 @@
 <h1>Hello world</h1>
-<!-- 3 ways to bind properties -->
+<!-- css class binding -->
 
-<div><img src="{{ imageUrl}}" alt=""></div>
-<div><img [src]="imageUrl" alt=""></div>
-<div><img bind-src="imageUrl" alt=""></div>
-
-<h4>Image location: <span [textContent]="imageUrl"></span></h4>
-    
-
-<hr>
-<p>Create post</p>
-<p [hidden]="isUnchanged">Post has been changed, please wait</p>
-<button [disabled]="isUnchanged">Save</button>
+<h4 [class.special]="isSpecial">This class binding is special</h4>
+<h2 [ngClass]="currentClasses">This div is both .special and .saveAble</h2>
