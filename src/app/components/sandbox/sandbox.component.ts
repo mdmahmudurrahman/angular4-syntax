@@ -10,18 +10,7 @@ import { Customer } from './Customer';
 })
 
 export class SandboxComponent {
-  isSpecial = true;
-  canSave = true;
-  currentStyles = {};
-
-  constructor() {
-    this.setCurrentStyles();
-  }
-
-  setCurrentStyles() {
-    this.currentStyles = {
-      'font-style': this.canSave ? 'italic' : 'normal',
-      'font-size': this.isSpecial ? '50px' : '10px'
-    }
-  }
+  birthDay = new Date(1987, 1, 15);
+  total = 500;
+  fee = 1;
 }

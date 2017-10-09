@@ -1,6 +1,10 @@
 <h1>Hello world</h1>
-<!-- css style binding -->
+<!-- pipes -->
 
-<div [style.font-size]="isSpecial ? 'x-large' : 'smaller'">Font size depends on isSpecial</div>
-
-<div [ngStyle]="currentStyles">This div is initially saveable and special</div>
+<p>My birth day is: {{birthDay | date}}</p>
+<p>My birth day is: {{birthDay | date:"MM-dd-yy"}}</p>
+<p>I was born in: {{birthDay | date:"yyyy"}}</p>
+<p>I love {{'cake' | uppercase}}</p>
+<p>I hate {{'CATS' | lowercase}}</p>
+<p>Youe total is {{ total | currency: "GBP": "1"}}</p>
+<p>Our fee is {{fee | percent}}</p>
