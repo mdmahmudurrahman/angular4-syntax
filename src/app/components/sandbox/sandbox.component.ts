@@ -10,13 +10,6 @@ import { Customer } from './Customer';
 })
 
 export class SandboxComponent {
-  greeting:string = "Angular app";
-  isSpecial:boolean = false;
-  show:string = "Show";
-  hide:string = "Hide"
-
-  changeGreeting() {
-    this.greeting = "Angular application";
-    this.isSpecial = !this.isSpecial;
-  }
+  name:string = "";
+  age:number = 0;
 }
