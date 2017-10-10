@@ -1,10 +1,12 @@
-<h1>Hello world</h1>
-<!-- pipes -->
+<h1>Demo app</h1>
+<!-- Angular event -->
+<button (click)="fireEvent($event, 'Hello')">Click me</button>
+<button (mouseover)="fireEvent($event, 'Hello')">mouseover</button>
+<button (mousedown)="fireEvent($event, 'Hello')">mousedown</button>
+<button (mouseup)="fireEvent($event, 'Hello')">mouseup</button>
+<button (dblClick)="fireEvent($event, 'Hello')">dblClick</button>
+<button (drag)="fireEvent($event, 'Hello')">drag</button>
+<button (dragover)="fireEvent($event, 'Hello')">dragover</button>
 
-<p>My birth day is: {{birthDay | date}}</p>
-<p>My birth day is: {{birthDay | date:"MM-dd-yy"}}</p>
-<p>I was born in: {{birthDay | date:"yyyy"}}</p>
-<p>I love {{'cake' | uppercase}}</p>
-<p>I hate {{'CATS' | lowercase}}</p>
-<p>Youe total is {{ total | currency: "GBP": "1"}}</p>
-<p>Our fee is {{fee | percent}}</p>
+
+ 

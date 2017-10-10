@@ -13,4 +13,8 @@ export class SandboxComponent {
   birthDay = new Date(1987, 1, 15);
   total = 500;
   fee = 1;
+
+  fireEvent(e, greeting) {
+    console.log(e);
+  }
 }
