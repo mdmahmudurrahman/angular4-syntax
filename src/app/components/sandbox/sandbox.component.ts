@@ -10,11 +10,16 @@ import { Customer } from './Customer';
 })
 
 export class SandboxComponent {
-  name:string = "";
-  users:string[] = [];
+  user = {
+    name: ''
+  }
 
-  onSubmit(e) {
-    e.preventDefault();
-    this.users.push(this.name);
+  onSubmit({value, valid}) {
+    if(valid) {
+      alert(JSON.stringify(value));
+    }
+    else {
+      alert(valid);
+    }
   }
 }
