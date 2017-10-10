@@ -1,7 +1,10 @@
 import { template } from '@angular-devkit/schematics/src';
 import { NgModel } from '@angular/forms/src/directives';
 import { Component, NgModule } from '@angular/core';
+
 import { Customer } from './Customer';
+import { DataService } from '../../services/data.service';
+import { EmployeeDataService } from '../../services/employee.data.service';
 
 @Component({
   selector: 'sandbox',
@@ -10,16 +13,11 @@ import { Customer } from './Customer';
 })
 
 export class SandboxComponent {
-  user = {
-    name: ''
-  }
-
-  onSubmit({value, valid}) {
-    if(valid) {
-      alert(JSON.stringify(value));
-    }
-    else {
-      alert(valid);
-    }
+  users:string[];
+  employees: string[];
+  constructor(public dataService:DataService, 
+    public employeeDataService:EmployeeDataService) {
+      this.users = this.dataService.getUsers();
+      this.employees = this.employeeDataService.getEmployees();
   }
 }
