@@ -10,11 +10,13 @@ import { Customer } from './Customer';
 })
 
 export class SandboxComponent {
-  birthDay = new Date(1987, 1, 15);
-  total = 500;
-  fee = 1;
+  greeting:string = "Angular app";
+  isSpecial:boolean = false;
+  show:string = "Show";
+  hide:string = "Hide"
 
-  fireEvent(e, greeting) {
-    console.log(e);
+  changeGreeting() {
+    this.greeting = "Angular application";
+    this.isSpecial = !this.isSpecial;
   }
 }
