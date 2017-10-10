@@ -11,5 +11,10 @@ import { Customer } from './Customer';
 
 export class SandboxComponent {
   name:string = "";
-  age:number = 0;
+  users:string[] = [];
+
+  onSubmit(e) {
+    e.preventDefault();
+    this.users.push(this.name);
+  }
 }
