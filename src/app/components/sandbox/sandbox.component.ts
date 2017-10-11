@@ -13,11 +13,11 @@ import { EmployeeDataService } from '../../services/employee.data.service';
 })
 
 export class SandboxComponent {
-  users:string[];
-  employees: string[];
-  constructor(public dataService:DataService, 
-    public employeeDataService:EmployeeDataService) {
-      this.users = this.dataService.getUsers();
-      this.employees = this.employeeDataService.getEmployees();
+  data:any[] = [];
+
+  constructor(public dataService:DataService) {
+    this.dataService.getData().subscribe((data) => {
+      this.data.push(data);
+    });
   }
 }
